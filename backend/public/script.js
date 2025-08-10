@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api"; // Change if backend is hosted online
+const API_URL = "mongodb+srv://shashistudy2125:Shashi%402003@cluster0.of0ap6g.mongodb.net/voting_app?retryWrites=true&w=majority"; // Change if backend is hosted online
 
 /* =======================
    REGISTER USER
@@ -130,4 +130,5 @@ function logout() {
   localStorage.removeItem("role");
   window.location.href = "index.html";
 }
+
 
