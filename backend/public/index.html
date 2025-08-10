@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Register - Voting App</title>
+  <title>Login - Voting App</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -14,6 +15,7 @@
       background-size: 400% 400%;
       animation: gradientBG 10s ease infinite;
       font-family: Arial, sans-serif;
+      padding: 10px;
     }
 
     @keyframes gradientBG {
@@ -28,14 +30,15 @@
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      width: 320px;
+      width: 100%;
+      max-width: 320px;
     }
 
     input {
       display: block;
       width: 100%;
       margin: 10px 0;
-      padding: 8px;
+      padding: 10px;
       border-radius: 5px;
       border: 1px solid #ccc;
       font-size: 16px;
@@ -43,7 +46,7 @@
     }
 
     button {
-      padding: 8px 15px;
+      padding: 10px 15px;
       background: #4CAF50;
       color: white;
       border: none;
@@ -73,18 +76,35 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Mobile-friendly adjustments */
+    @media (max-width: 480px) {
+      body {
+        padding: 20px;
+      }
+      .container {
+        padding: 15px;
+      }
+      input, button {
+        font-size: 14px;
+        padding: 8px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Register</h2>
-    <input type="text" id="regName" placeholder="Name" />
-    <input type="email" id="regEmail" placeholder="Email" />
-    <input type="password" id="regPassword" placeholder="Password" />
-    <button onclick="register()">Register</button>
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email" />
+    <input type="password" id="loginPassword" placeholder="Password" />
+    <button onclick="login()">Login</button>
 
-    <p>Already have an account? <a href="index.html">Login here</a></p>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
