@@ -23,7 +23,7 @@ async function register() {
   alert(data.message);
 
   if (data.message === "Registration successful") {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
 }
 
@@ -93,7 +93,7 @@ async function loadResults() {
 
   if (!token || role !== "admin") {
     alert("Access denied: Admins only");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -128,5 +128,6 @@ async function loadResults() {
 function logout() {
   localStorage.removeItem("token");
   localStorage.removeItem("role");
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
+
